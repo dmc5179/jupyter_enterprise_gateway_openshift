@@ -1,2 +1,13 @@
 ---
 # tasks file for jupyter_enterprise_gateway_openshift/
+
+- name: Create Jupyter Enterprise Gateway Namespace
+  delegate_to: localhost
+  k8s:
+    name: "{{ gateway_namespace }}"
+    api_version: v1
+    kind: Namespace
+    state: present
+    wait: true
+    kubeconfig: "{{ kubeconfig }}"
+    validate_certs: '{{ kube_ssl_enabled }}'

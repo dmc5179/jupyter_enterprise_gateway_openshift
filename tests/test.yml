@@ -1,5 +1,4 @@
 ---
 - hosts: localhost
-  remote_user: root
   roles:
-    - jupyter_enterprise_gateway_openshift/
+    - ../../jupyter_enterprise_gateway_openshift/

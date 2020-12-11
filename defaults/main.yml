@@ -1,2 +1,6 @@
 ---
 # defaults file for jupyter_enterprise_gateway_openshift/
+
+gateway_namespace: 'enterprise-gateway'
+kubeconfig: '{{ ansible_env.HOME }}/.kube/config'
+kube_ssl_enabled: false
